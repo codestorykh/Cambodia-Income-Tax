@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Kon App</string>
+    <string name="rules_text">Rule Page</string>
+    <string name="about_text">About Page</string>
+    <string name="rules">Rules</string>
+    <string name="about">About</string>
+    <string name="share">Share</string>
+    <string name="home">Home</string>
+    <string name="app_title">ការគណនាពន្ធលើប្រាក់ខែ</string>
+    <string name="marquee_note">Noted: currency exchange rates ($1USD = 4000 Riel, approximately)</string>
+    <string name="txt_currency">រូបិយប័ណ្ណ</string>
+    <string name="khr_ccy">ប្រាក់រៀល</string>
+    <string name="usd_ccy">ប្រាក់ដុល្លារ</string>
+    <string name="txt_income">ប្រាក់បៀវត្ស</string>
+    <string name="txt_benefit">អត្ថប្រយោជន៍បន្ថែម</string>
+    <string name="txt_married">មានប្ដី ឫប្រពន្ធ</string>
+    <string name="marry_yes">មាន</string>
+    <string name="marry_no">មិនមាន</string>
+    <string name="txt_child">កូនក្នុងបន្ទុក</string>
+    <string name="txt_result_income">ប្រាក់បៀវត្សទទួលបាន</string>
+    <string name="txt_result_tax">ពន្ធលើប្រាក់បៀវត្ស</string>
+    <string name="btn_calculator">គណនាពន្ធ</string>
+    <string name="btn_reset">លុបទិន្នន័យ</string>
+
+</resources>

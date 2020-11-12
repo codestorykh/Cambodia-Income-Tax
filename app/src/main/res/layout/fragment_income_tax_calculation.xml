@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/titleConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.d.khmerincometax.IncomeTaxCalculatorFragment">
+
+    <TextView
+        android:id="@+id/txtAppTitle"
+        android:layout_width="345dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center_horizontal"
+        android:text="@string/app_title"
+        android:textAlignment="center"
+        android:textColor="#7A0B8D"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_marquee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="117dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/marquee_note"
+        android:textColor="@color/colorOrange"
+        app:layout_constraintBottom_toTopOf="@+id/currency_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/currency"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/txt_currency"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/currency_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAppTitle"
+        tools:ignore="MissingConstraints" />
+
+
+    <RadioGroup
+        android:id="@+id/currency_type"
+        android:layout_width="207dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="183dp"
+        android:layout_marginLeft="183dp"
+        android:layout_marginTop="56dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAppTitle"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/currency_khr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:text="@string/khr_ccy"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/currency_usd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="12dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/usd_ccy"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtIncome"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_income"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency" />
+
+    <EditText
+        android:id="@+id/editIncome"
+        android:layout_width="208dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/backwithborder"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textColor="@color/colorBlue"
+        android:textCursorDrawable="@null"
+        app:layout_constraintStart_toEndOf="@+id/txtIncome"
+        app:layout_constraintTop_toBottomOf="@+id/currency_type" />
+
+    <TextView
+        android:id="@+id/txtBenefit"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_benefit"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIncome" />
+
+    <EditText
+        android:id="@+id/editBenefit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backwithborder"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textColor="@color/colorBlue"
+        android:textCursorDrawable="@null"
+        app:layout_constraintStart_toEndOf="@+id/txtBenefit"
+        app:layout_constraintTop_toBottomOf="@+id/editIncome" />
+
+    <TextView
+        android:id="@+id/married"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_married"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBenefit"
+        tools:ignore="MissingConstraints" />
+
+    <RadioGroup
+        android:id="@+id/is_married"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/married"
+        app:layout_constraintTop_toBottomOf="@+id/editBenefit"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/married_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:text="@string/marry_yes"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/married_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="12dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/marry_no"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtChild"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_child"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/married"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editChild"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/backwithborder"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:maxLength="2"
+        android:textColor="@color/colorBlue"
+        android:textCursorDrawable="@null"
+        app:layout_constraintStart_toEndOf="@+id/txtChild"
+        app:layout_constraintTop_toBottomOf="@+id/is_married" />
+
+    <TextView
+        android:id="@+id/txtResultIncome"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_result_income"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtChild"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextCal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backwithborder"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textColor="@color/colorGreen"
+        android:textCursorDrawable="@null"
+        app:layout_constraintStart_toEndOf="@+id/txtResultIncome"
+        app:layout_constraintTop_toBottomOf="@+id/editChild" />
+
+
+    <TextView
+        android:id="@+id/txtResultTax"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_result_tax"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultIncome"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTax"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backwithborder"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textColor="@color/colorOrange"
+        android:textCursorDrawable="@null"
+        app:layout_constraintStart_toEndOf="@+id/txtResultTax"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCal" />
+
+    <Button
+        android:id="@+id/buttonCal"
+        android:layout_width="118dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/colorBlue"
+        android:text="@string/btn_calculator"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultTax"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="118dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="@color/colorBlue"
+        android:text="@string/btn_reset"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTax"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
