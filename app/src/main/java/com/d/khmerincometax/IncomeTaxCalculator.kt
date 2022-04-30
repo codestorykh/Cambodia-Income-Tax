@@ -131,19 +131,19 @@ class IncomeTaxCalculator : AppCompatActivity() {
         var taxAmount = 0f
 
         if (income <= 1200000) {
-            taxAmount = income
+            return taxAmount = income
         }
         if (income in 1200001.0..2000000.0) {
-            taxAmount = (income * 0.05).toFloat()
+            return taxAmount = (income * 0.05).toFloat()
         }
         if (income in 2000001.0..8500000.0) {
-            taxAmount = (income * 0.1).toFloat()
+            return taxAmount = (income * 0.1).toFloat()
         }
         if (income in 8500001.0..1.25E7) {
-            taxAmount = (income * 0.15).toFloat()
+            return taxAmount = (income * 0.15).toFloat()
         }
         if (income > 12500001) {
-            taxAmount = (income * 0.2).toFloat()
+            return taxAmount = (income * 0.2).toFloat()
         }
 
         return taxAmount
